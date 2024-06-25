@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Footer 3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        body {
+  background: #efefef;
+  font-family: "Euclid Circular A", "Poppins";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding-bottom: 20px;
+  background-color:  rgb(58, 56, 56);;
+  /* color: #b70707; */
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover
+{
+    border-bottom: 3px solid black;
+    width: fit-content;
+    color: rgb(46, 28, 5);
+}
+
+footer article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 50px 40px;
+  margin: -99px 20px 20px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #773ecb, #2663ff);
+}
+
+footer article h2 {
+  font-weight: 400;
+  color: rgb(255 255 255 / 70%);
+}
+
+footer article button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0 40px 0 44px;
+  width: 100%;
+  background: #0a1536;
+  border: 0;
+  border-radius: 30px;
+  color: #f9f9f9;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+footer section {
+  padding: 0 50px;
+}
+
+section.top {
+  padding-top: 30px;
+  margin-bottom: 48px;
+}
+
+section.top img {
+  display: block;
+  height: 30px;
+  margin: 0 0 30px;
+}
+
+section.top ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (width > 480px) {
+  footer article button {
+    width: 70%;
+  }
+
+  section.top ul {
+    padding-right: 10%;
+  }
+}
+
+@media (width > 600px) {
+  footer article {
+    flex-direction: row;
+    min-height: 140px;
+    margin: -70px 20px 20px;
+    padding: 30px 50px 30px;
+  }
+
+  footer article button {
+    width: auto;
+    padding: 0 20px 0 24px;
+  }
+
+  section.top ul {
+    grid-template-columns: repeat(4, 1fr);
+    padding-right: 0;
+  }
+}
+
+section.top ul li a {
+  display: block;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+section.top h3 {
+  color: rgb(255 255 255 / 40%);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+section.bottom
+ {
+  padding-top: 10px;
+  border-top: 2px solid rgb(255 255 255 / 10%);
+  color: rgb(255 255 255 / 40%);
+  font-size: 13px;
+}
+.top h3{
+  margin-left: 10%;
+}
+
+
+
+
+.icons ul{
+    width: 250px;
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.icons li{
+    list-style: none;
+    display: inline-block;
+    font-size: 23px;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.instagram{
+    border: 2px solid #ff0095;
+    color: #c72b7e;
+}
+
+.twitter{
+    border: 2px solid #1c9ff1;
+    color: #1c9ff1;
+}
+
+.youtube{
+    border: 2px solid #ff0000;
+    color: #ff0000;
+}
+
+.facebook{
+    border: 2px solid #0679e6;
+    color: #0679e6;
+}
+
+
+/* #####################  Hover EFFECTS ############################# */
+
+.icon{
+    transition: 0.6s;
+}
+
+li:hover .icon1{
+    transform: rotateY(360deg);
+    text-shadow: 0px 0px 1px #ff0095;
+}
+
+li:hover .icon2{
+    transform: rotateY(360deg);
+    text-shadow: 0px 0px 1px #1c9ff1;
+}
+
+li:hover .icon3{
+    transform: rotateY(360deg);
+    text-shadow: 0px 0px 1px #ff0000;
+}
+
+li:hover .icon4{
+    transform: rotateY(360deg);
+    text-shadow: 0px 0px 1px #0679e6;
+}
+
+li{
+    transition: 0.4s;
+    transition-delay: 0.2s;
+}
+
+.instagram:hover{
+    box-shadow: 0px 0px 7px #ff0095 inset,
+                0px 0px 7px #ff0095;
+}
+
+.twitter:hover{
+    box-shadow: 0px 0px 7px #1c9ff1 inset,
+                0px 0px 7px #1c9ff1;
+}
+
+.youtube:hover{
+    box-shadow: 0px 0px 7px #ff0000 inset,
+                0px 0px 7px #ff0000;
+}
+
+.facebook:hover{
+    box-shadow: 0px 0px 7px #0679e6 inset,
+                0px 0px 7px #0679e6;
+}
+    </style>
+  </head>
+  <body>
+    <footer>
+      
+
+      <section class="top">
+        <ul>
+          <li>
+            <h3>Quick links</h3>
+            <a href="about.html">About us</a>
+            <a href="blogs.html">Our blogs</a>
+            <a>Jewellery Care</a>
+            <a>Offers & Promotions</a>
+          </li>
+          <li>
+            <h3>Info</h3>
+            <a>Shipping & Returns</a>
+            <a>Privacy policy</a>
+            <a>International Shipping</a>
+            <a>Terms Of Service</a>
+          </li>
+          
+          <li>
+            <h3>Contact Us</h3>
+            <a>BIS : HM/C - 6290031216</a>
+            <a>For any suggestions, queries or complaints please contact us:
+
+Indiejewel Fashions Private Limited</a>
+            <a>or call us:7829558887 </a>
+          </li>
+         <li>
+            <h3>Folllow us on</h3><br>
+          <ul class="icons">
+            <li class="instagram"><i class="fa-brands fa-instagram icon1 icon"></i></li>
+            <li class="twitter"><i class="fa-brands fa-twitter icon2 icon"></i></li>
+            <li class="facebook"><i class="fa-brands fa-facebook icon4 icon"></i></li>
+        </ul>
+        </li>
+
+        </ul>
+        
+       
+      </section>
+    </footer>
+  </body>
+</html>

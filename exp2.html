@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Pacifico&family=Yellowtail&display=swap" rel="stylesheet">
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Document</title>
+    <!-- <script src="exp.js"></script> -->
+</head>
+<style>
+    #cart-items
+    {
+        margin-left: 15px;
+    }
+    img
+    {
+        margin-left: 20px;
+    }
+
+    .cart-container-full {
+        border: 2px solid grey;
+        border-radius: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+
+    .cart-details-image img {
+        height: 200px;
+        width: 200px;
+    }
+    .cart-container-full .cart-details-text{
+        margin-bottom: 100px;
+    }
+    .cart-container-full .cart-details-text .name{
+        font-size: 25px;
+    }
+    #cart-page h2{
+        text-align: center;
+        font-size: 55px;
+        font-family: "Yellowtail", cursive;
+  font-weight: 400;
+  font-style: normal;
+         
+  
+}
+
+       
+       
+    
+    .cart-details-quantity{
+        margin-bottom: 100px;
+        font-size: 20px;
+
+    }
+    #cart-page .main-price {
+        font-size: 30px;
+        margin-left: 30px;
+    }
+    .payment{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        /* margin-top: 30px; */
+    }
+    .payment-button button{
+        margin-top: 20px;
+        width: 200px;
+        height: 50px;
+        border-radius: 10px;
+        margin-right: 100px;
+    }
+    .cart-details-text .name{
+        font-family: "Sofia", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.cart-details-text p{
+        font-family: "Sofia", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.cart-details-quantity {
+        font-family: "Sofia", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --color: #c0392b;
+  --color-dark: #a53125;
+  --speed: 0.25s;
+  --transition: all var(--speed) cubic-bezier(0.310, -0.105, 0.430, 1.400);
+}
+
+/* Main Styles */
+.remove-btn {
+  display: block;
+  background-color: var(--color);
+  width: 200px;
+  height: 50px;
+  line-height: 100px;
+  margin: auto;
+  color: #fff;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 0 rgba(0,0,0,.3);
+  transition: var(--transition);
+}
+
+.remove-btn span,
+.remove-btn .icon {
+  display: block;
+  height: 100%;
+  text-align: center;
+  position: absolute;
+  top: 0;
+}
+
+.remove-btn span {
+  width: 72%;
+  line-height: inherit;
+  font-size: 15px;
+  text-transform: uppercase;
+  left: 0;
+  transition: var(--transition);
+  transform: translateY(-20px);
+}
+
+.remove-btn span:after {
+  content: '';
+  background-color: var(--color-dark);
+  width: 2px;
+  height: 70%;
+  position: absolute;
+  top: 15%;
+  right: -1px;
+  transform: translateY(20px);
+}
+
+.remove-btn .icon {
+  width: 28%;
+  right: 0;
+  transition: var(--transition);
+}
+
+.remove-btn .fa {
+  font-size: 27px;
+  vertical-align: middle;
+  transition: var(--transition), height var(--speed) ease;
+  transform: translateY(-20px);
+}
+
+.remove-btn .fa-remove {
+  height: 36px;
+  
+}
+
+.remove-btn .fa-check {
+  display: none;
+  
+}
+
+.remove-btn.success,
+.remove-btn:hover {
+  span {
+    left: -72%;
+    opacity: 0;
+    
+  }
+  .icon {
+    width: 100%;
+  }
+  .icon .fa {
+    font-size: 36px;
+  }
+}
+
+.remove-btn.success {
+  background-color: #27ae60;
+}
+
+.remove-btn.success .fa-remove {
+  display: none;
+}
+
+.remove-btn.success .fa-check {
+  display: inline-block;
+}
+
+.remove-btn:hover {
+  opacity: 0.9;
+}
+
+.remove-btn:active {
+  opacity: 1;
+}
+    
+    
+</style>
+<body style="background-color: rgba(34, 31, 31, 0.088);">
+    
+
+    <div id="cart-page">
+      <a href="cat1.html">
+        <button>Back</button>
+      </a>
+        <h2>My Cart</h2>
+        <div id="cart-items">
+            <!-- Cart items will be displayed here -->
+          
+        </div>
+        <div class="payment">
+         <div class="payment-price">
+           <p class="main-price"><strong>Total Price: </strong><span id="total-price"></span></p>
+         </div>
+         <div class="payment-button">
+         <a href="credit.html">
+            <button>pay now</button>
+         </a>
+
+         </div>
+        </div>
+
+    </div>
+
+    <script>
+        function showCartPage() {
+            
+            var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+          
+            var cartPage = document.getElementById('cart-page');
+          
+            var cartItemsContainer = document.getElementById('cart-items');
+          
+            var totalCostElement = document.getElementById('total-price');
+        
+            cartItemsContainer.innerHTML = '';
+            var totalCost = 0;
+    
+            if (cartItems.length > 0) {
+                cartItems.forEach(function(item, index) {
+                    var cartItemElement = document.createElement('div');
+                    cartItemElement.innerHTML = `
+                        <div class="cart-container-full">
+                            <div class="cart-details-image">
+                                <img src="${item.image}" alt="${item.name}" width="100">   
+                            </div>
+                           
+                            <div class="cart-details-text">
+                                <p class="name">${item.name}</p>   
+                                <p>Cost: ${item.quantity * item.price} INR</p>
+                            </div>
+                            <div class="cart-details-quantity">
+                                    <p>Quantity: <span id="quantity-${index}">${item.quantity}</span>
+                                        <button onclick="updateQuantity(${index}, 1)">+</button>
+                                        <button onclick="updateQuantity(${index}, -1)">-</button>
+                                    </p>
+                                <a class="remove-btn" href="#"role="button" onclick="deleteItem(${index})">
+                                   <span>remove</span>
+                                  <div class="icon">
+                                    <i class="fa fa-remove"></i>
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </div>
+                              </a>
+                            </div>
+                      </div>
+                    `;
+                    cartItemsContainer.appendChild(cartItemElement);
+                  
+                    totalCost += item.quantity * item.price;
+                });
+          
+                cartPage.style.display = 'block';
+            } else {
+
+                cartPage.style.display = 'none';
+            }
+    
+    
+            totalCostElement.textContent = totalCost + ' INR';
+        }
+    
+        function updateQuantity(index, change) {
+        
+            var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+        
+            cartItems[index].quantity += change;
+            if (cartItems[index].quantity < 1) {
+                cartItems.splice(index, 1);
+            }
+            
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+  
+            showCartPage();
+        }
+    
+        function deleteItem(index) {
+
+            var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+            cartItems.splice(index, 1);
+            
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+          
+            showCartPage();
+        }
+    
+        
+        window.onload = showCartPage;
+    </script>
+
+<script>
+function updateCartQuantity() {
+    
+    var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    var cartQuantityElement = document.getElementById('cartQuantity');
+    
+    var totalQuantity = 0;
+
+  
+    cartItems.forEach(function(item) {
+        totalQuantity += item.quantity;
+    });
+
+    
+    cartQuantityElement.textContent = totalQuantity;
+}
+
+document.getElementById('cartIcon').addEventListener('click', function() {
+    updateCartQuantity();
+});
+</script>
+
+    
+</body>
+</html>

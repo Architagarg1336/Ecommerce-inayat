@@ -1,0 +1,1990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="cat.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+<body style="background-color: rgba(128, 128, 128, 0.274);">
+	 <div class="header">
+		<div class="logo">
+			<a href="index.html"> <img src="logo3.png" alt="" height="75px" style="padding-bottom: 20px;"></a>
+		</div>
+		<!-- <div class="search-container-icons"> -->
+			<div class="searchboxcat">
+		<input type="text" id="searchInput" placeholder="  what do you want to search ">
+        <button onclick="searchItems()" id="searchInput" class="searchboxcat-button">Search</button>
+			</div>
+		<div class="icons">
+			
+			<a href="exp2.html" id="cartIcon" class="fa fa-shopping-cart" style=" position: relative ; "></a>
+				
+			<a href="profile.html" class="fa fa-user"></a>
+			<a href="#" class="fa fa-bars"></a>
+
+
+		</div>
+		<!-- </div> -->
+
+
+	 </div>
+	 <div class="links">
+		<a href="#">Earings</a>
+		<a href="#">Necklaces</a>
+		<a href="#">Rings</a>
+		<a href="#">Bracelets</a>
+		<a href="index.html">Home</a>
+
+
+	 </div>
+
+
+<nav>
+	<a href="#" class="category-link" data-category="earrings">Earrings</a>
+	<a href="#" class="category-link" data-category="necklaces">Necklaces</a>
+	<a href="#" class="category-link" data-category="bangles">Bangles</a>
+	<a href="#" class="category-link" data-category="rings">Rings</a>
+  </nav>
+  
+  <div class="img">
+	<img src="finalcat.gif" alt="" width="100%" style="margin-top: 50px;">
+  </div>
+  <script>
+// Function to store content of div cat into local storage
+function storeContent() {
+    localStorage.setItem('catContent', document.getElementById('cat').innerHTML);
+}
+
+
+</script>
+</body>
+
+<script>
+    // Function to filter and display search results
+    function searchItems() {
+        const query = document.getElementById('searchInput').value.toLowerCase();
+        const products = document.getElementsByClassName('product');
+
+        for (let i = 0; i < products.length; i++) {
+            const productName = products[i].getElementsByTagName('p')[0].textContent.toLowerCase();
+            if (productName.includes(query)) {
+                products[i].style.display = 'block';
+            } else {
+                products[i].style.display = 'none';
+            }
+        }
+    }
+
+
+
+</script>
+
+
+   <br><br><br>
+   <section class="cat" id="main">
+	<div class="earrings">
+	 <div class="container-cat" id="cont">
+			<div class="cat1-item product" id="image" aria-label="platinum" >
+				<img src="th4.webp" alt=""  class="img-fluid"  >
+				<div class="description-container">
+					<div class="description-box" >
+						<p>Diamond Zircon Drizzle Drop Earrings</p>
+						<img src="th4.webp" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							Like a light drizzle on a summer afternoon, YOU are a marvel of nature that leaves everyone spellbound. 
+							<br><br>
+							<b>The Design:</b>  <br> <br>
+							AAA+ Quality Zircons
+                            925 Sterling silver 
+                            Dimensions: 2.6 cm x 0.95 cm
+                            Rhodium e-coat to prevent tarnish 
+						</p>
+						<h3 style="margin-left: 20px; color:black; margin-top: 40px;"> Price:₹7000</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+						</div>
+						
+					</div>
+					
+					<button  class="btn2" onclick="addToCart('Diamond Zircon Drizzle Drop Earrings', 'th4.webp',7000)" >add to cart</button>
+
+				</div>
+				
+				
+			</div>
+
+			<div class="cat1-item  product " id="image" aria-label="silver" >
+				<img src="th5.webp" alt="" class="img-fluid" >
+				<div class="description-box"  >
+						<p ><b>Diamond Aqua Blue Crystal Earrings</b></p>
+						<img src="th5.webp" alt=""  >
+						<p>The Inspiration: <br>
+							DIVA, true beauty is often found in the simplest of things. Just like tea on a rainy day or those small moments with YOUR special one!
+							<br>
+							The Design: <br> 
+							AAA+ Quality Zircon Stones
+                            925 Sterling Silver 
+                            Dimensions: 2.7 cm x 1.4 cm
+                            Rhodium e-coat to prevent tarnish 
+						</p><br><br>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹1200</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+						</div>
+						   
+					</div>
+					<button  class="btn2" onclick="addToCart('Diamond Aqua Blue Crystal Earrings', 'th5.webp',1200)" >add to cart</button>
+				
+
+			</div>
+
+			 <div class="cat1-item product" id="image"  aria-label="gold" >
+				<img src="th1.png" alt="" class="img-fluid" >
+				<div class="description-container">
+					<div class="description-box" >
+						<p>Oxidised Silver Square Danglers</p>
+						<img src="th1.png" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							Glamming up the basics is always fun. This nice obsession has brought us the inspiration for the Oxidised Silver Square Danglers.
+							<br><br>
+							<b>The Design:</b>  <br> <br>
+							When the look feels incomplete, add this and voila.
+
+                            Dimension : 100 mm x 17 mm
+                            Oxidised 925 Sterling Silver
+                            Perfect for sensitive ears
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹5000</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Oxidised Silver Square Danglers', 'th1.png',5000)" >add to cart</button>
+
+				</div>
+			</div> 
+
+			<div class="cat1-item product" id="image" aria-label="gold" >
+				<img src="th8.jpg" alt="" class="img-fluid" >
+				<div class="description-container">
+					<div class="description-box">
+						<p> <b>silver Splendid Earrings </b>
+						</p>
+						<img src="th8.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							Glamming up the basics is always fun. This nice obsession has brought us the inspiration for the Oxidised Silver Square Danglers.
+							<br><br>
+							<b>The Design:</b>  <br> 
+							When the look feels incomplete, add this and voila.
+
+                            Dimension : 100 mm x 17 mm
+                            Oxidised 925 Sterling Silver
+                            Perfect for sensitive ears
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹2000</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('silver Splendid  Earrings', 'th8.jpg',2000)" >add to cart</button>
+				</div>
+			</div>
+
+			<div class="cat1-item product" id="image"  >
+				<img src="th9.jpg" alt="" class="img-fluid" >
+				<div class="description-container">
+					<div class="description-box">
+						<p><b> Gold Sparkling Earrings </b></p>
+						<img src="th9.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							The Gold Sparkling Joy Diamond Earrings are inspired by the shimmering moments of our love, we find boundless joy.
+							<br>
+							<b>The Design:</b>  <br> 
+							These gold earrings have a unique design with separate layers, one of which is set with lab grown diamonds.
+                             BIS-Hallmarked Gold Jewellery
+                            Our 18K solid gold pieces are made to last forever. 18K
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹12000</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Gold Sparkling Earrings', 'th9.jpg',12000)" >add to cart</button>
+
+				</div>
+			</div>
+			
+
+			<div class="cat1-item  product" id="image"  >
+				<img src="th7.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Gold VFJ VIGHNAHARTA FASHION </b></p>
+						<img src="th7.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							The Gold Sparkling Joy Diamond Earrings are inspired by the shimmering moments of our love, we find boundless joy.
+							<br>
+							<b>The Design:</b>  <br> 
+							These gold earrings have a unique design with separate layers, one of which is set with lab grown diamonds.
+                             BIS-Hallmarked Gold Jewellery
+                            Our 18K solid gold pieces are made to last forever. 18K
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹32000</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" style="color: black;",>&#9733;</span>
+						</div>
+
+						
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Gold VFJ VIGHNAHARTA FASHION', 'th7.jpg',32000)" >add to cart</button>
+					
+
+				</div>
+			</div>
+			<div class="cat1-item product" id="image"  >
+				<img src="th10.jpg" alt="" class="img-fluid"  >
+				<div class="description-container">
+					<div class="description-box">
+						<p> <b>Timeless Beauty Gold Stud Earrings </b></p>
+						<img src="th10.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							hese timeless earrings are a must-have for every woman! Classic and ageless, this pair of earrings will give your style a touch of heritage and magnificence.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+
+                            Earring Width: 1.24 Cm <br>
+							Brand: Tanishq  <br>
+							Collection: Bestsellers <br>
+							Gender: Women
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹24000</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+						</div>
+						
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Timeless Beauty Gold Stud Earrings', 'th10.jpg',24000)" >add to cart</button>
+					
+
+				</div>
+			</div>
+			<div class="cat1-item product" id="image"  >
+				<img src="th11.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p> <b>Gold Graceful Swish Jhumka</b></p>
+						<img src="th11.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These timeless earrings are a must-have for every woman! Classic and ageless, this pair of earrings will give your style a touch of heritage and magnificence.
+							<br>
+							<b>The Design:</b>  <br> 
+							AAA+ Quality Zircon Stones <br>
+                            925 Sterling metal <br>
+                            Perfect for sensitive ears <br>
+                            Rhodium e-coat to prevent tarnish <br>
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹1,24,000</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+						
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Gold Graceful Swish Jhumka', 'th11.jpg',12400)" >add to cart</button>
+
+					
+
+				</div>
+			</div>
+
+			<div class="cat1-item product " id="image"  >
+				<img src="tha.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p> <b>Artificial Twinkling Hoop Earrings </b></p>
+						<img src="tha.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+						These Silver Zircon Twinkling Hoop Earrings have been inspired by the serene starry nights nature blesses us with.
+						<br>
+						<b>The Design:</b>  <br> 
+						Earring Height: 1.81 Cm <br>
+
+						Earring Width: 1.24 Cm <br>
+						Brand: Tanishq  <br>
+						Collection: Bestsellers <br>
+						Gender: Women
+					</p>
+					<h3 style="margin-left: 20px; color:black;"> Price:₹1,000</h3>
+					<div class="rating">
+						<span class="star" style="margin-left: 20px;">&#9733;</span>
+						<span class="star">&#9733;</span>
+						<span class="star">&#9733;</span>
+						<span class="star" >&#9733;</span>
+						<span class="star"  style="color: black;">&#9733;</span>
+					</div>
+						
+
+					</div>
+
+					<button  class="btn2" onclick="addToCart('Artificial Twinkling Hoop Earrings', 'tha.jpg',1000)" >add to cart</button>
+
+
+				</div>
+			</div>
+			
+
+			<div class="cat1-item product" id="image"  >
+				<img src="thv.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Artificial Snowflake earrings</b></p>
+						<img src="thv.jpg" alt="">
+
+						<p> <b>The Inspiration:</b> <br>
+							These Snowflake Twinkling Hoop Earrings have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							Earring Width: 1.24 Cm <br>
+							Brand: Tanishq  <br>
+							Collection: Bestsellers <br>
+							Gender: Women
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹1300</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" >&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>		
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Artificial Snowflake earrings', 'thv.jpg',1300)" >add to cart</button>
+
+
+				</div>
+			</div>
+			<div class="cat1-item product" id="image"  >
+				<img src="thb.jpg" alt="" class="img-fluid" >
+				<div class="description-container">
+					<div class="description-box">
+						<p> <b>Platinum silver hoops </b></p>
+						<img src="thb.jpg" alt="">
+
+						<img src="thb.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+						These Silver Zircon Twinkling Hoop Earrings have been inspired by the serene starry nights nature blesses us with.
+						<br>
+						<b>The Design:</b>  <br> 
+						Earring Height: 1.81 Cm <br>
+
+						Earring Width: 1.24 Cm <br>
+						Brand: Tanishq  <br>
+						Collection: Bestsellers <br>
+						Gender: Women
+					</p>
+					<h3 style="margin-left: 20px; color:black;"> Price:₹1,000</h3>
+					<div class="rating">
+						<span class="star" style="margin-left: 20px;">&#9733;</span>
+						<span class="star">&#9733;</span>
+						<span class="star">&#9733;</span>
+						<span class="star" style="color: black;">&#9733;</span>
+						<span class="star"  style="color: black;">&#9733;</span>
+					</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Platinum silver hoops', 'thb.jpg',1000)" >add to cart</button>
+				
+
+				</div>
+			</div>
+			<div class="cat1-item product" id="image"  >
+				<img src="thj.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p> <b>Silver Butterfly Studs </b></p>
+						<img src="thj.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p><br>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹1200</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+						
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Silver Butterfly Studs', 'thj.jpg',1200)" >add to cart</button>
+					
+
+				</div>
+			</div>
+
+			<div class="cat1-item product" id="image" >
+				<img src="thd.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p>Golden Butterfly Earrings</p>
+						<img src="thd.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p><br>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹1400</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+						
+
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Golden Butterfly Earrings', 'thd.jpg',1400)" >add to cart</button>
+					
+
+				</div>
+			</div>
+			
+
+			<div class="cat1-item product" id="image"  >
+				<img src="thf.jpg" alt="" class="img-fluid" >
+				<div class="description-container">
+					<div class="description-box">
+						<p>Golden Butterfly Affair Earrings</p>
+						<img src="thf.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹1100</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" >&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Golden Butterfly Affair Earrings', 'thf.jpg',1100)" >add to cart</button>
+
+
+				</div>
+			</div>
+			<div class="cat1-item product" id="image"  >
+				<img src="the.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Artificial Moon silver studded earrings</b></p>
+						<img src="the.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹999</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+						
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Artificial Moon silver studded earrings', 'the.jpg',999)" >add to cart</button>
+
+
+				</div>
+			</div>
+			<div class="cat1-item product" id="image"  >
+				<img src="thk.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Artificial Heart studded earrings </b></p>
+						<img src="thk.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹799</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Artificial Heart studded earrings ', 'thk.jpg',799)" >add to cart</button>
+
+
+				</div>
+			</div>
+
+		
+
+
+	</div>
+</div>
+
+     
+<div class="necklaces">
+	<div class="container-cat" id="cont">
+			<div class="cat1-item product" id="image"  >
+				<img src="ne.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Golden dual layer Necklace</b></p>
+						<img src="ne.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹7999</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Golden dual layer necklace ', 'ne.jpg',7999)" >add to cart</button>
+
+
+				</div>
+				
+			</div>
+			
+
+			<div class="cat1-item product" id="image"  >
+				<img src="neb.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Rose Gold Necklace</b></p>
+						<img src="neb.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹9999</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Rose Gold necklace ', 'neb.jpg',9999)" >add to cart</button>
+
+
+				</div>
+			</div>
+			<div class="cat1-item product" id="image"  >
+				<img src="nec.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Rose Gold pearl Necklace</b></p>
+						<img src="nec.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹799</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Rose Gold pearl necklace ', 'nec.jpg',799)" >add to cart</button>
+
+
+				</div>
+			</div>
+			<div class="cat1-item product" id="image"  >
+				<img src="ne3.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Elegent Silver rise Necklace</b></p>
+						<img src="ne3.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹20000</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Elegent Silver rise necklace ', 'ne3.jpg',20000)" >add to cart</button>
+
+
+				</div>
+			</div>
+
+
+			<div class="cat1-item product" id="image"  >
+				<img src="nea.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Gold drizzle drop Necklace</b></p>
+						<img src="nea.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							 Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹20000</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Gold drizzle drop necklace ', 'nea.jpg',20000)" >add to cart</button>
+
+
+				</div>
+			</div>
+			
+
+			<div class="cat1-item product" id="image"  >
+				<img src="ne7.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Gold Enamourned Necklace</b></p>
+						<img src="ne7.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹40000</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Gold Enamourned necklace ', 'ne7.jpg',40000)" >add to cart</button>
+
+
+				</div>
+			</div>
+			<div class="cat1-item product" id="image"  >
+				<img src="ne8.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Ancient Gold Necklace</b></p>
+						<img src="ne8.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹30000</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Ancient Gold necklace ', 'ne8.jpg',30000)" >add to cart</button>
+
+
+				</div>
+			</div>
+			<div class="cat1-item product" id="image"  >
+				<img src="ne9.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Golden pearl Necklace</b></p>
+						<img src="ne9.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹7990</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Golden pearl necklace ', 'ne9.jpg',7990)" >add to cart</button>
+
+
+				</div>
+			</div>
+
+			<div class="cat1-item product" id="image"  >
+				<img src="ned.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Silver Infinity Necklace</b></p>
+						<img src="ned.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							 Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹1999</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" >&#9733;</span>
+							<span class="star">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Silver Infinity necklace ', 'ned.jpg',1999)" >add to cart</button>
+
+
+				</div>
+			</div>
+			
+
+			<div class="cat1-item product" id="image"  >
+				<img src="nef.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Silver Heart Pendant</b></p>
+						<img src="nef.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹2799</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Silver Heart Pendant ', 'nef.jpg',2799)" >add to cart</button>
+
+
+				</div>
+			</div>
+			<div class="cat1-item product" id="image"  >
+				<img src="neg.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Diamond Star Pendant</b></p>
+						<img src="neg.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹37990</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Diamond Star pendant', 'neg.jpg',37990)" >add to cart</button>
+
+
+				</div>
+			</div>
+			<div class="cat1-item product" id="image"  >
+				<img src="nek.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Silver Star Necklace</b></p>
+						<img src="nek.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹999</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" >&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Silver Star necklace ', 'nek.jpg',999)" >add to cart</button>
+
+
+				</div>
+			</div>
+
+
+		
+			<div class="cat1-item product" id="image"  >
+				<img src="neh.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Rose Gold Moon star pendant</b></p>
+						<img src="neh.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹799</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Rose Gold Moon star pendant ', 'neh.jpg',799)" >add to cart</button>
+
+
+				</div>
+			</div>
+			
+
+			<div class="cat1-item product" id="image"  >
+				<img src="nez.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Gold Snowflake pendant</b></p>
+						<img src="nez.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹1299</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" >&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Gold Snowflake pendant ', 'nez.jpg',1299)" >add to cart</button>
+
+
+				</div>
+			</div>
+			<div class="cat1-item product" id="image"  >
+				<img src="nezz.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Silver wings pendant</b></p>
+						<img src="nezz.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹1799</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Silver wings pendant ', 'nezz.jpg',1799)" >add to cart</button>
+
+
+				</div>
+			</div>
+			<div class="cat1-item product" id="image"  >
+				<img src="nezzz.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Silver Maple leaf pendant</b></p>
+						<img src="nezzz.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹2799</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Silver Maple leaf pendant ', 'nezzz.jpg',2799)" >add to cart</button>
+
+
+				</div>
+			</div>
+
+	</div>
+</div>
+     
+
+<div class="bangles">
+	<div class="container-cat" id="cont">
+			<div class="cat1-item product" id="image"  >
+				<img src="ban1.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Harmony bracelet</b></p>
+						<img src="ban1.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹12000</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Harmony bracelet ', 'ban1.jpg',12000)" >add to cart</button>
+
+
+				</div>
+			</div>
+			
+
+			<div class="cat1-item product" id="image"  >
+				<img src="ban2.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Gold silver bangle</b></p>
+						<img src="ban2.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹44799</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Gold silver bangle ', 'ban2.jpg',44799)" >add to cart</button>
+
+
+				</div>
+			</div>
+			<div class="cat1-item product" id="image"  >
+				<img src="ban3.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Silver Kangan</b></p>
+						<img src="ban3.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹5000</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Silver Kangan ', 'ban3.jpg',5000)" >add to cart</button>
+
+
+				</div>
+			</div>
+			<div class="cat1-item product" id="image"  >
+				<img src="ban4.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Silver supple bangle</b></p>
+						<img src="ban4.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹4999</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Silver supple bangle ', 'ban4.jpg',4999)" >add to cart</button>
+
+
+				</div>
+			</div>
+
+			<div class="cat1-item product" id="image"  >
+				<img src="ban5.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Gold supple bangle</b></p>
+						<img src="ban5.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹34999</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Gold supple bangle ', 'ban5.jpg',34999)" >add to cart</button>
+
+
+				</div>
+				
+			</div>
+			
+
+			<div class="cat1-item product" id="image"  >
+				<img src="ban6.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Gold plated bangle</b></p>
+						<img src="ban6.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹44999</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Gold plated bangle ', 'ban6.jpg',44999)" >add to cart</button>
+
+
+				</div>
+			</div>
+			<div class="cat1-item product" id="image"  >
+				<img src="ban7.jpg" alt="" class="img-fluid" >
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Gold Kundan bangle</b></p>
+						<img src="ban7.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹24999</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Gold Kundan bangle ', 'ban7.jpg',24999)" >add to cart</button>
+
+
+				</div>
+			</div>
+			<div class="cat1-item product" id="image"  >
+				<img src="ban8.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Gold wavy bangle</b></p>
+						<img src="ban8.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹48999</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Gold  wavy bangle ', 'ban8.jpg',48999)" >add to cart</button>
+
+
+				</div>
+			</div>
+
+
+		
+			<div class="cat1-item product" id="image"  >
+				<img src="ban13.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Pearl Artificial bracelete</b></p>
+						<img src="ban13.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹4999</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Pearl Artificial bracelete ', 'ban13.jpg',4999)" >add to cart</button>
+
+
+				</div>
+			</div>
+			
+
+			<div class="cat1-item product" id="image"  >
+				<img src="ban14.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>silver Artificial bracelete</b></p>
+						<img src="ban14.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹4999</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('silver Artificial bracelete ', 'ban14.jpg',4999)" >add to cart</button>
+
+
+				</div>
+			</div>
+			<div class="cat1-item product" id="image"  >
+				<img src="ban15.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Silver Stone bracelete</b></p>
+						<img src="ban15.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹2999</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Silver Stone bracelete ', 'ban15.jpg',2999)" >add to cart</button>
+
+
+				</div>
+			</div>
+			<div class="cat1-item product" id="image"  >
+				<img src="ban16.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Gold curl bracelete</b></p>
+						<img src="ban16.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹14999</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Gold curl bracelete ', 'ban16.jpg',14999)" >add to cart</button>
+
+
+				</div>
+			</div>
+
+			<div class="cat1-item product" id="image"  >
+				<img src="ban9.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Gold clasp bracelete</b></p>
+						<img src="ban9.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹12999</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Gold clasp bracelete ', 'ban9.jpg',12999)" >add to cart</button>
+
+
+				</div>
+			</div>
+			
+
+			<div class="cat1-item product" id="image"  >
+				<img src="ban10.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Gold silver beads bracelete</b></p>
+						<img src="ban10.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹11199</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Gold silver beads bracelete ', 'ban10.jpg',11199)" >add to cart</button>
+
+
+				</div>
+			</div>
+			<div class="cat1-item product" id="image"  >
+				<img src="ban11.jpg" alt=""  class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Diamond bracelete</b></p>
+						<img src="ban11.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹114999</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Diamond bracelete ', 'ban11.jpg',114999)" >add to cart</button>
+
+
+				</div>
+			</div>
+			<div class="cat1-item product" id="image"  >
+				<img src="ban12.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p><b>Stone Artificial bracelete</b></p>
+						<img src="ban12.jpg" alt="">
+						<p> <b>The Inspiration:</b> <br>
+							These  Love Like A Butterfly Stud have been inspired by the serene starry nights nature blesses us with.
+							<br>
+							<b>The Design:</b>  <br> 
+							Earring Height: 1.81 Cm <br>
+	
+							AAA+ Quality Zircons <br>
+							Dimensions: 12 mm x 8 mm <br>
+							AAA+ Quality Zircon Stones <br>
+							925 Sterling silver <br>
+							Collection: Bestsellers
+						</p>
+						<h3 style="margin-left: 20px; color:black;"> Price:₹999</h3>
+						<div class="rating">
+							<span class="star" style="margin-left: 20px;">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star">&#9733;</span>
+							<span class="star" style="color: black;">&#9733;</span>
+							<span class="star"  style="color: black;">&#9733;</span>
+						</div>
+
+					</div>
+					<button  class="btn2" onclick="addToCart('Stone Artificial bracelete ', 'ban12.jpg',999)" >add to cart</button>
+
+
+				</div>
+			</div>
+
+	</div>
+</div>
+     
+
+<div class="rings">
+	<div class="container-cat" id="cont">
+			<div class="cat1-item product" id="image"  >
+				<img src="ri1.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p>helllllo</p>
+						<img src="ri1.jpg" alt="">
+						<p>fghjk</p>
+
+					</div>
+					<button class="btn2" >add to cart</button>
+
+				</div>
+			</div>
+			
+
+			<div class="cat1-item product" id="image"  >
+				<img src="ri2.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p>helllllo</p>
+						<img src="ri2.jpg" alt="">
+						<p>fghjk</p>
+
+					</div>
+					<button class="btn2" >add to cart</button>
+
+				</div>
+			</div>
+			<div class="cat1-item product" id="image"  >
+				<img src="ri3.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p>helllllo</p>
+						<img src="ri3.jpg" alt="">
+						<p>fghjk</p>
+
+					</div>
+					<button class="btn2" >add to cart</button>
+
+				</div>
+			</div>
+			<div class="cat1-item product" id="image"  >
+				<img src="ri4.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p>helllllo</p>
+						<img src="ri4.jpg" alt="">
+						<p>fghjk</p>
+
+					</div>
+					<button class="btn2" >add to cart</button>
+
+				</div>
+			</div>
+
+			<div class="cat1-item product" id="image"  >
+				<img src="ri8.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p>helllllo</p>
+						<img src="ri8.jpg" alt="">
+						<p>fghjk</p>
+
+					</div>
+					<button class="btn2" >add to cart</button>
+
+				</div>
+			</div>
+			
+
+			<div class="cat1-item product" id="image"  >
+				<img src="ri7.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p>helllllo</p>
+						<img src="ri7.jpg" alt="">
+						<p>fghjk</p>
+
+					</div>
+					<button class="btn2" >add to cart</button>
+
+				</div>
+			</div>
+			<div class="cat1-item product" id="image"  >
+				<img src="ri5.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p>helllllo</p>
+						<img src="ri5.jpg" alt="">
+						<p>fghjk</p>
+
+					</div>
+					<button class="btn2" >add to cart</button>
+
+				</div>
+			</div>
+			<div class="cat1-item product" id="image"  >
+				<img src="ri6.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p>helllllo</p>
+						<img src="ri6.jpg" alt="">
+						<p>fghjk</p>
+
+					</div>
+					<button class="btn2" >add to cart</button>
+
+				</div>
+			</div>
+
+			<div class="cat1-item product" id="image"  >
+				<img src="ri9.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p>helllllo</p>
+						<img src="ri9.jpg" alt="">
+						<p>fghjk</p>
+
+					</div>
+					<button class="btn2" >add to cart</button>
+
+				</div>
+			</div>
+			
+
+			<div class="cat1-item product" id="image"  >
+				<img src="ri10.jpg" alt="" class="img-fluid" >
+				<div class="description-container">
+					<div class="description-box">
+						<p>helllllo</p>
+						<img src="ri10.jpg" alt="">
+						<p>fghjk</p>
+
+					</div>
+					<button class="btn2" >add to cart</button>
+
+				</div>
+			</div>
+			<div class="cat1-item product" id="image"  >
+				<img src="ri11.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p>helllllo</p>
+						<img src="ri11.jpg" alt="">
+						<p>fghjk</p>
+
+					</div>
+					<button class="btn2" >add to cart</button>
+
+				</div>
+			</div>
+			<div class="cat1-item product" id="image"  >
+				<img src="ri12.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p>helllllo</p>
+						<img src="ri12.jpg" alt="">
+						<p>fghjk</p>
+
+					</div>
+					<button class="btn2" >add to cart</button>
+
+				</div>
+			</div>
+
+			<div class="cat1-item product" id="image"  >
+				<img src="ri13.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p>helllllo</p>
+						<img src="ri13.jpg" alt="">
+						<p>fghjk</p>
+
+					</div>
+					<button class="btn2" >add to cart</button>
+
+				</div>
+			</div>
+			
+
+			<div class="cat1-item product" id="image"  >
+				<img src="ri14.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p>helllllo</p>
+						<img src="ri14.jpg" alt="">
+						<p>fghjk</p>
+
+					</div>
+					<button class="btn2" >add to cart</button>
+
+				</div>
+			</div>
+			<div class="cat1-item product" id="image"  >
+				<img src="ri15.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p>helllllo</p>
+						<img src="ri15.jpg" alt="">
+						<p>fghjk</p>
+
+					</div>
+					<button class="btn2" >add to cart</button>
+
+				</div>
+			</div>
+			<div class="cat1-item product" id="image"  >
+				<img src="ri16.jpg" alt="" class="img-fluid">
+				<div class="description-container">
+					<div class="description-box">
+						<p>helllllo</p>
+						<img src="ri16.jpg" alt="">
+						<p>fghjk</p>
+
+					</div>
+					<button class="btn2" >add to cart</button>
+
+				</div>
+			</div>
+	</div>
+</div>
+     
+ 
+
+
+   </section>
+
+ 
+	
+	<script>
+	  // Function to add product to cart
+	  function addToCart(itemName, itemImage, itemPrice) {
+		  var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+	
+		  var existingItemIndex = cartItems.findIndex(item => item.name === itemName);
+		  if (existingItemIndex !== -1) {
+			  cartItems[existingItemIndex].quantity++;
+		  } else {
+			  cartItems.push({ name: itemName, quantity: 1, image: itemImage, price:itemPrice });
+		  }
+	
+		  localStorage.setItem('cart', JSON.stringify(cartItems));
+	
+	  }
+	
+	  </script>
+	
+	<script>
+	  function showCart() {
+		// Redirect to the desired page
+		window.location.href = "exp2.html";
+	  }
+	
+	</script>
+   
+  
+<script src="cat.js"></script>
+
+<script>
+
+	
+
+</script>
+
+</body>
+</html>

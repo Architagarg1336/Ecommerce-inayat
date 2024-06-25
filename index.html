@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Document</title>
+ 
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0
+    ,200;0, 300; 0,400;0, 500; 0, 600;0, 700; 1, 100; 1, 200; 1, 300; 1, 400; 1, 500; 1, 600; 1, 700&displa y=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <a href="https://www.flaticon.com/free-icons/jewelry" title="jewelry icons"></a>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  </head>
+
+<body>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- Bootstrap JavaScript and Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+
+</body>
+
+
+
+<body style="background-color: rgb(58, 56, 56);">
+  <nav class="navbar navbar-expand-lg navbar-dark  fixed-top" style="background-color: #646161; height: 70px;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="logo3.png" height="75cm" width="100cm">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar" style="background-color:  #646161;">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="navbardrop" data-toggle="dropdown">
+              Categories
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="cat1.html">Necklaces</a>
+              <a class="dropdown-item" href="cat1.html">Earrings</a>
+              <a class="dropdown-item" href="cat1.html">Rings</a>
+              <a class="dropdown-item" href="cat1.html">Bangles</a>
+
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="blogs.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="about.html">About us</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-but">
+            <a class="btn btn-outline-light" href="#" onclick="showsignuppopup()">Sign up</a>
+          </li>
+          <li class="nav-but" style="padding-right: 50px;">
+            <a class="btn btn-outline-light" href="#" onclick="showloginpopup()">Login</a>
+          </li>
+        </ul>
+
+        <li style="list-style: none;">
+          <button onclick="openPage()" style="border: 0px; background: none; color: white;"><i class="fa fa-user">
+            </i></button>
+        </li>
+
+        <li style="list-style: none;">
+          <button onclick="showCart()" style="border: 0px; background: none; color: white;"><i class=" fa fa-shopping-cart fa-lg">
+            </i></button>
+        </li>
+        
+        
+      </div>
+    </div>          
+  </nav>
+
+  <script>
+    function openPage() {
+      // Redirect to the desired page
+      window.location.href = "profile.html";
+    }
+
+  </script>
+
+  <section class="image-main">
+    <p style="padding: 50px;"> <span>Vintage And
+        <br>
+        Modern <br>
+        Estate Jewelry</span></p>
+
+  </section>
+
+  <div id="loginPopup2" class="login-popup2" style="height:auto;">
+    <div class="login-content2">
+      <span class="close2" onclick="closeLoginPopup()">&times;</span>
+      <h2 style="font-family: cursive;">LOGIN</h2><br><br>
+      <form>
+        <label for="email"><b> Email: </b></label><br>
+        <input type="email" id="email" name="email" placeholder="name@abc.com" required><br><br>
+
+        <label for="password"><b>Password:</b></label>
+        <input type="password" id="password1" name="password" placeholder="Enter password"
+          style="height: 30px; width: 200px;" required><br><br>
+
+        <input type="checkbox" id="terms" name="terms">
+        <label for="terms" style="position: relative;">I agree to the Terms and Conditions</label><br><br>
+
+        <button type="submit" class="btn2" style="color: black;">Login</button><br><br>
+        <p style="color:black;font-size: 4mm;font-family:sans-serif;font-style: normal;position:fixed;"> Doesn't have
+          any account?<a href="#" onclick="loginpopup()">Sign up</a></p>
+
+      </form>
+    </div>
+  </div>
+  <script>
+    function closeLoginPopup() {
+      var popup = document.getElementById('loginPopup2');
+      popup.style.display = 'none';
+    }
+    function showloginpopup() {
+      var popup = document.getElementById('loginPopup2');
+      popup.style.display = 'block';
+    }
+    function closesignupPopup() {
+      var popup = document.getElementById('loginPopup1');
+      popup.style.display = 'none';
+    }
+    function showsignuppopup() {
+      var popup = document.getElementById('loginPopup1');
+      popup.style.display = 'block';
+    }
+    function loginpopup() {
+      document.getElementById('loginPopup2').style.display = 'none';
+      document.getElementById('loginPopup1').style.display = 'block';
+    }
+  </script>
+
+  <div id="loginPopup1" class="login-popup1" style="height:auto;">
+    <div class="login-content1">
+      <span class="close2" onclick="closesignupPopup()">&times;</span>
+      <h2 style="font-family: cursive;">SIGNUP</h2><br>
+      <form id="form2" onsubmit="validateSignup(event)">
+        <label for="name"><b> First Name: </b></label><br>
+        <input type="text" id="txt" placeholder="First name" style="height: 30px; width: 200px;" required><br><br>
+
+        <label for="name"><b>Last Name</b></label>
+        <input type="text" id="txt1" placeholder="Last name" style="height: 30px; width: 200px;" required><br><br>
+
+        <label for="email"><b> Email: </b></label><br>
+        <input type="email" id="email1" name="email" placeholder="name@abc.com" style="height: 30px; width: 200px;"
+          required><br><br>
+
+        <label for="password"><b>Password:</b></label>
+        <input type="password" id="password" name="password" placeholder="Enter password"
+          style="height: 30px; width: 200px;" required><br><br>
+
+        <label for="password"><b>Confirm Password:</b></label>
+        <input type="password" id="confirmPassword" name="password" placeholder="confirmpassword"
+          style="height: 30px; width: 200px;" required><br><br>
+
+        <input type="checkbox" id="terms" name="terms">
+        <label for="terms" style="position: relative;">I agree to the Terms and Conditions</label><br><br>
+
+        <button type="submit" class="btn2" style="color: black;">Signup</button><br><br>
+
+      </form>
+    </div>
+  </div>
+
+          <!-- script for password validation -->
+
+  <script>
+    function validateSignup(event) {
+        event.preventDefault(); 
+        
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
+
+        if (password !== confirmPassword) {
+            alert("Passwords do not match. Please try again.");
+            return;
+        }
+
+        alert("Signup successful!");
+    }
+</script>
+
+
+<!-- script for data  storing  -->
+
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+
+      var firstName = document.getElementById("txt").value;
+      var lastName = document.getElementById("txt1").value;
+      var email = document.getElementById("email1").value;
+
+      // Create an object to store the user data
+      var userData = {
+        firstName: firstName,
+        lastName: lastName,
+        email: email
+      };
+
+      localStorage.setItem('userData', JSON.stringify(userData));
+
+      window.location.href = "index.html";
+    }
+
+    document.getElementById("form2").addEventListener("submit", handleSubmit);
+  </script>
+
+  <section class="page2" style="background-color: rgb(58, 56, 56);">
+    <div class="heading-page2">
+      <img src="offer.png" alt="" height="100cm" class="availoffer">
+      <p>avail our offers</p>
+      <h1>Collection Arrived</h1>
+    </div>
+    <div class="container-page2">
+      <div class="item-page2">
+        <img src="Wedding Rings.jpg" alt="">
+        <div class="content">
+          <p>new rings</p>
+        </div>
+      </div>
+      <div class="item-page2">
+        <img src="Jewelry.jpg" alt="">
+        <div class="content">
+          <p>Earings</p>
+        </div>
+      </div>
+      <div class="item-page2">
+        <img src="Sapphire Diamond Necklace _ Statement Jewelry_ Statement Necklace_ Elegant Jewelry_ Unique Jewelry_.jpg" alt="">
+        <div class="content">
+          <p>Necklaces</p>
+        </div>
+      </div>
+      <div class="item-page2">
+        <img src="Zircon Heart Decor Bracelet.jpg" alt="">
+        <div class="content">
+          <p>Bracelets</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="page3">
+  
+    <img src="Beige Minimalist Femme Fashion Video Promo.gif" alt="" >
+  </section>
+
+
+  <section class="slider-section">
+
+    <h1 class="section-title " id="slider-label-1">Designed Jewellery</h1>
+
+    <div class="slider">
+
+      <ul class="slider-wrapper" style="list-style: none;">
+
+        <li class="slider-item">
+          <div class="images-container">
+            <img class="original-images" src="neck1.jpeg" width="200" height="300" loading="lazy" alt="img1">
+            <img class="hover-images" src="neck2.jpeg" width="200" height="300" loading="lazy" alt="img1">
+
+          </div>
+          <h4>Gold plated pearl kundan studded choker</h4>
+          <button class="price" style="height: 50px;width: 140px;margin-left: 5px; margin-top:15px;">view
+            details</button>
+          <button class="cart" onclick="addToCart('Gold plated pearl kundan studded choker', 'neck1.jpeg',3000)"  style="height: 50px;width: 140px; margin-left: 10px; margin-top: 15px;">Add to
+            cart</button>
+          <div class="details-box">
+            <p>cost:10k <br>
+              material:Gold plated pearl;<br>
+              Clasp type: Lobster clasp <br>
+              Design:vintage <br>
+              Occasion-type:Wedding <br>
+              country of Origin:India
+            </p>
+          </div>
+        </li>
+
+        <li class="slider-item">
+          <div class="images-container">
+            <img class="original-images" src="neck3.jpg" width="200" height="300" loading="lazy" alt="img1">
+            <img class="hover-images" src="neck4.jpg" width="200" height="300" loading="lazy" alt="img1">
+          </div>
+          <h4>Pearl Multilayered beaded choker necklace</h4>
+          <button class="price" style="height: 50px;width: 140px; margin-top:15px; margin-left: 7px;">view
+            details</button>
+          <button class="cart"  onclick="addToCart('Pearl Multilayered beaded choker necklace', 'neck3.jpg',2000)"   style="height: 50px;width: 140px;margin-left: 7px; margin-top:15px;">Add to cart</button>
+          <div class="details-box">
+            <p>
+              cost:8k<br>
+              material:white pearl;<br>
+              Clasp type: Lobster clasp <br>
+              Design:choker-style <br>
+              Occasion-type:Wedding,party,festival <br>
+              country of Origin:India
+
+            </p>
+          </div>
+        </li>
+
+        <li class="slider-item">
+          <div class="images-container">
+            <img class="original-images" src="bangle1.jpg" width="200" height="300" loading="lazy" alt="img1">
+            <img class="hover-images" src="bangle2.jpg" width="200" height="300" loading="lazy" alt="img1">
+          </div>
+          <h4>Traditional style gold bangles</h4>
+          <button class="price" style="height: 50px;width: 140px; margin-top:10px; margin-left: 7px;">view
+            details</button>
+          <button class="cart" onclick="addToCart('Traditional style gold bangles', 'bangle1.jpg',30000)" style="height: 50px;width: 140px;margin-left: 7px; margin-top:10px;">Add to cart</button>
+          <div class="details-box">
+            <p>
+              cost:35k <br>
+              material:Gold <br>
+              Ring size:2.6 <br>
+              Occasion-type:Wedding <br>
+              country of Origin:India
+
+            </p>
+          </div>
+        </li>
+
+        <li class="slider-item">
+          <div class="images-container">
+            <img class="original-images" src="bangle3.jpg" width="200" height="300" loading="lazy" alt="img1">
+            <img class="hover-images" src="bangle4.jpg" width="200" height="300" loading="lazy" alt="img1">
+          </div>
+          <h4>Traditional gold wavy bangle</h4>
+          <button class="price" style="height: 50px;width: 140px; margin-top:10px; margin-left: 7px;">view
+            details</button>
+          <button class="cart" onclick="addToCart('Traditional  gold wavy bangle', 'bangle3.jpg',40000)"  style="height: 50px;width: 140px;margin-left: 7px; margin-top:10px;">Add to cart</button>
+          <div class="details-box">
+            <p>cost:10k <br>
+              material:white pearl;<br>
+              Design:vintage-inspired
+
+            </p>
+          </div>
+        </li>
+
+        <li class="slider-item">
+          <div class="images-container">
+            <img class="original-images" src="ring1.jpg" width="200" height="300" loading="lazy" alt="img1">
+            <img class="hover-images" src="ring2.jpg" width="200" height="300" loading="lazy" alt="img1">
+          </div>
+          <h4>Crystal studded flower gold ring</h4>
+          <button class="price" style="height: 50px;width: 140px; margin-top:10px; margin-left: 7px;">view
+            details</button>
+          <button class="cart" onclick="addToCart('Crystal studded flower gold ring', 'ring1.jpg',30000)" style="height: 50px;width: 140px;margin-left: 7px; margin-top:10px;">Add to cart</button>
+          <div class="details-box">
+            <p>
+              cost:15k <br>
+              material:Gold plated<br>
+              Ring size:7 <br>
+              Occasion-type:Anniversary,Birthday <br>
+              country of Origin:India
+            </p>
+          </div>
+        </li>
+
+        <li class="slider-item">
+          <div class="images-container">
+            <img class="original-images" src="ring5.jpg" width="200" height="300" loading="lazy" alt="img1">
+            <img class="hover-images" src="ring6.jpg" width="200" height="300" loading="lazy" alt="img1">
+          </div>
+          <h4>Rose Gold magnificient Ring</h4>
+          <button class="price" style="height: 50px;width: 140px; margin-top:10px; margin-left: 7px;">view
+            details</button>
+          <button class="cart"  onclick="addToCart('Rose Gold magnificient Ring', 'ring5.jpg',50000)"    style="height: 50px;width: 140px;margin-left: 7px; margin-top:10px;">Add to cart</button>
+
+          <div class="details-box">
+            <p>cost:7k <br>
+              material:Rose Gold<br>
+              Ring size: adjustable <br>
+              Occasion-type: Engagement, Memorial Day,Wedding <br>
+
+            </p>
+          </div>
+        </li>
+
+        <li class="slider-item">
+          <div class="images-container">
+            <img class="original-images" src="neck5.jpg" width="200" height="300" loading="lazy" alt="img1">
+            <img class="hover-images" src="neck6.jpg" width="200" height="300" loading="lazy" alt="img1">
+          </div>
+          <h4>Delicate Diamond necklace</h4>
+          <button class="price" style="height: 50px;width: 140px; margin-top:10px; margin-left: 7px;">view
+            details</button>
+          <button class="cart"  onclick="addToCart('Delicate Diamond necklace', 'neck5.jpg',70000)"  style="height: 50px;width: 140px;margin-left: 7px; margin-top:10px;">Add to cart</button>
+          <div class="details-box">
+            <p>cost:40k <br>
+              material:Delicate diamond<br>
+              Design:vintage-inspired
+
+            </p>
+          </div>
+        </li>
+
+        <li class="slider-item">
+          <div class="images-container">
+            <img class="original-images" src="ear1.webp" width="200" height="300" loading="lazy" alt="img1">
+            <img class="hover-images" src="ear2.webp" width="200" height="300" loading="lazy" alt="img1">
+          </div>
+          <h4>Delicate Diamond Earrings</h4>
+          <button class="price" style="height: 50px;width: 140px; margin-top:10px; margin-left: 7px;">view
+            details</button>
+          <button class="cart" onclick="addToCart('Delicate silver Earrings', 'ear1.webp',40000)"  style="height: 50px;width: 140px;margin-left: 7px; margin-top:10px;">Add to cart</button>
+          <div class="details-box">
+            <p>cost:40k <br>
+              material:Delicate diamond<br>
+              Design:vintage-inspired
+
+            </p>
+          </div>
+        </li>
+
+        <li class="slider-item">
+          <div class="images-container">
+            <img class="original-images" src="ear3.webp" width="200" height="300" loading="lazy" alt="img1">
+            <img class="hover-images" src="ear4.webp" width="200" height="300" loading="lazy" alt="img1">
+          </div>
+          <h4>Sparkly Lightning Earrings</h4>
+          <button class="price" style="height: 50px;width: 140px; margin-top:10px; margin-left: 7px;">view
+            details</button>
+          <button class="cart" onclick="addToCart('Sparkly Lightning Earrings', 'ear3.webp',1000)"  style="height: 50px;width: 140px;margin-left: 7px; margin-top:10px;">Add to cart</button>
+          <div class="details-box">
+            <p>cost:40k <br>
+              material:Delicate diamond<br>
+              Design:vintage-inspired
+
+            </p>
+          </div>
+        </li>
+
+
+
+      </ul>
+
+    </div>
+    
+
+  </section>
+
+  <br><br><br><br>
+
+  <!-- script for add to cart button design bubble -->
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll(".cart ");
+
+      buttons.forEach(function (button) {
+        button.addEventListener("click", function (e) {
+          e.preventDefault();
+          button.classList.add("animate");
+          setTimeout(() => {
+            button.classList.remove("animate");
+          }, 600);
+        });
+      });
+    });
+
+  </script>
+
+  
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var btns = document.querySelectorAll('.price');
+      var detailsBoxes = document.querySelectorAll('.details-box');
+
+      btns.forEach(function (btn, index) {
+        btn.addEventListener('click', function () {
+          if (detailsBoxes[index].style.display === 'none' || detailsBoxes[index].style.display === '') {
+            detailsBoxes[index].style.display = 'block';
+            btn.textContent = 'Hide Details';
+          } else {
+            detailsBoxes[index].style.display = 'none';
+            btn.textContent = 'View Details';
+          }
+        });
+      });
+    });
+  </script>
+
+
+
+  <section class="page5">
+    <h1>Customer's Stories</h1>
+    <div class="custom-main">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="custom">
+              <h2>Harshita</h2>
+              <p>Never thought buying jewelry would be this easy, thanks for making my mom's bday special. Thank you
+                guys!!! </p>
+              <div class="icon-container">
+                <img src="jewelry.png" alt="Icon" class="icon">
+              </div>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <img src="flip4.jpg" alt=""  style="border-radius: 30px;">
+            <!-- Back content (if any) -->
+          </div>
+        </div>
+      </div>
+
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="custom">
+              <h2>Priya</h2>
+              <p>Gifted these earrings to my sister on her wedding and she loved them! I am obsessed with buying gifts
+                from Inayat.</p>
+              <div class="icon-container">
+                <img src="jewelry2.png" alt="Icon" class="icon">
+              </div>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <img src="flip5.jpeg" alt="" height="230px" width="450px" style="border-radius: 30px;">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="custom">
+              <h2>Shraddha</h2>
+              <p>A big shout out to you guys for improving my hubby's tastes. Completely in Love with my ring and
+                Inayat.</p>
+              <div class="icon-container">
+                <img src="jewelry.png" alt="Icon" class="icon">
+              </div>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <img src="flip1.jpeg" alt="" height="230px" width="450px" style="border-radius: 30px;">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </section>
+
+
+  <footer>
+      
+
+    <section class="top">
+      <ul>
+        <li>
+          <h3>Quick links</h3>
+          <a href="about.html">About us</a>
+          <a href="blogs.html">Our blogs</a>
+          <a>Jewellery Care</a>
+          <a>Offers & Promotions</a>
+        </li>
+        <li>
+          <h3>Info</h3>
+          <a>Shipping & Returns</a>
+          <a>Privacy policy</a>
+          <a>International Shipping</a>
+          <a>Terms Of Service</a>
+        </li>
+        
+        <li>
+          <h3>Contact Us</h3>
+          <a>BIS : HM/C - 6290031216</a>
+          <a>For any suggestions, queries or complaints please contact us:
+
+            Indiejewel Fashions Private Limited</a>
+          <a>or call us:7829558887 </a>
+        </li>
+       <li>
+          <h3>Folllow us on</h3><br>
+        <ul class="icons">
+          <li class="instagram"><i class="fa-brands fa-instagram icon1 icon"></i></li>
+          <li class="twitter"><i class="fa-brands fa-twitter icon2 icon"></i></li>
+          <li class="facebook"><i class="fa-brands fa-facebook icon4 icon"></i></li>
+      </ul>
+      </li>
+
+      </ul>
+      
+     
+    </section>
+  </footer>
+
+
+
+
+    <!-- --------------script of cart------------------  -->
+  
+<script>
+  // Function to add product to cart
+  function addToCart(itemName, itemImage,itemPrice) {
+      var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+      var existingItemIndex = cartItems.findIndex(item => item.name === itemName);
+      if (existingItemIndex !== -1) {
+          cartItems[existingItemIndex].quantity++;
+      } else {
+          cartItems.push({ name: itemName, quantity: 1, image: itemImage,price:itemPrice });
+      }
+
+      localStorage.setItem('cart', JSON.stringify(cartItems));
+
+  }
+
+  
+  </script>
+
+<script>
+  function showCart() {
+    // Redirect to the desired page
+    window.location.href = "exp2.html";
+  }
+
+</script>
+
+
+
+</body>
+
+</html>
